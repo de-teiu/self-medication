@@ -10,7 +10,13 @@
 
 <body>
     <div id="main">
-        <input type="text" v-model="searchText" v-on:change="search">
+        <input type="text" v-model="searchText" v-on:input="search" v-on:keyup="search" v-on:keydown="search" v-on:change="search">
+        <ul>
+            <li v-for="item in searchResult">
+                {{ item.nm }} {{ item.mf }} {{ item.cp }}
+            </li>
+        </ul>
+
     </div>
 
 
