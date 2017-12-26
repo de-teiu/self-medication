@@ -11,12 +11,18 @@
 <body>
     <div id="main">
         <input type="text" v-model="searchText" v-on:input="search" v-on:keyup="search" v-on:keydown="search" v-on:change="search">
-        <ul>
-            <li v-for="item in searchResult">
-                {{ item.nm }} {{ item.mf }} {{ item.cp }}
-            </li>
-        </ul>
-
+        <div class="container">
+            <div class="result-header col-name">販売名</div>
+            <div class="result-header col-maker">製造販売業者名</div>
+            <div class="result-header col-component">成分名</div>
+        </div>
+        <div class="container" v-for="item in searchResult">
+            <div class="result-item col-name">
+                <a v-bind:href="link + item.nm">{{ item.nm }}</a>
+            </div>
+            <div class="result-item col-maker">{{ item.mf }}</div>
+            <div class="result-item col-component">{{ item.cp }}</div>
+        </div>
     </div>
 
 

@@ -1,0 +1,52 @@
+html, body, main {
+    height: 100%;
+}
+
+/** 親コンテナ */
+.container {
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+
+/** 検索結果ヘッダー */
+.result-header{
+    text-align: center;
+    padding: 0.1em;
+    background-color: aquamarine;
+    border-style: solid;
+    border-width: 0.05em;
+}
+
+/** 検索結果明細 */
+.result-item {
+    padding: 0.1em;
+    border-style: solid;
+    border-width: 0.05em;
+
+    border-top: none;
+}
+
+.container:nth-child(2n) .result-item{
+    background-color:rgb(240, 240, 240);
+}
+
+
+/** 製品名列 */
+.col-name {
+    width:230px;
+    border-right: none;
+}
+
+/** 製造元列 */
+.col-maker {
+    width:200px;
+}
+
+/** 成分列 */
+.col-component {
+    width:200px;
+    border-left: none;
+}

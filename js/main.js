@@ -22,6 +22,7 @@ function initVueObj(medicineObj) {
         data: {
             searchText: '',
             searchResult: '',
+            link: 'https://www.google.com/search?q=',
         },
         methods: {
             //検索処理
