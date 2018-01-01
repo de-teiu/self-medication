@@ -1,6 +1,14 @@
 html, body, main {
     height: 100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
 }
+
+@font-face {
+  font-family: YuGothicM;
+  src: local("Yu Gothic Medium");
+}
+
+
 
 /** 親コンテナ */
 .container {
