@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="main">
+    <div id="main" v-cloak>
         <input type="text" v-model="searchText" v-on:input="search" v-on:keyup="search" v-on:keydown="search" v-on:change="search">
         <div class="container">
             <div class="result-header col-name">販売名</div>

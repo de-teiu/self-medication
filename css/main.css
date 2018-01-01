@@ -1,5 +1,6 @@
 html, body, main {
     height: 100%;
+    margin: 0;
     font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
 }
 
@@ -8,7 +9,9 @@ html, body, main {
   src: local("Yu Gothic Medium");
 }
 
-
+[v-cloak] {
+  display: none;
+}
 
 /** 親コンテナ */
 .container {
