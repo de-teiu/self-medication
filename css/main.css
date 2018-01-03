@@ -3,6 +3,7 @@ html, body, main {
     margin: 0;
     font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
     color:#031727;
+    font-size:0.9em;
 }
 
 @font-face {
@@ -15,10 +16,15 @@ html, body, main {
 }
 
 #main{
-    padding-bottom:25px;
+    padding-bottom:35px;
 }
 
-.inputtext{
+.label-condition {
+    font-size:1.1em;
+    margin-right: 10px;
+}
+
+.input-text {
     padding: .5em .6em;
     display: inline-block;
     border: 1px solid #ccc;
@@ -34,6 +40,7 @@ html, body, main {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .search{
@@ -92,9 +99,16 @@ footer{
     color:rgb(216, 253, 241);
     position:fixed;
     width:100%;
-    height:25px;
+    height:35px;
     bottom:0;
     text-align:left;
     overflow:hidden;
     background-color:#031727;
+    padding-left: 5px;
+}
+
+.text-about{
+    color:rgb(218, 250, 240);
+    font-size:1.3em;
+    line-height: 35px;
 }

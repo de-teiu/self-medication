@@ -33,11 +33,14 @@
 
 .modal-body {
   margin: 20px 0;
+  color:#031727;
 }
 
-.modal-default-button {
-  float: right;
+.modal-footer {
+  height:20px;
+  text-align: center;
 }
+
 
 /*
  * The following styles are auto-applied to elements with
