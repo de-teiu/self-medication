@@ -40,10 +40,10 @@ html, body, main {
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .search{
+    align-items: center;
     padding:0.2em;
     
 }
