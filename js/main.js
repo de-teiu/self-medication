@@ -39,7 +39,7 @@ function initVueObj(medicineObj) {
                     if ((item.nm).indexOf(katakanaText) != -1) return true;
                 });
 
-                console.log(this.searchResult);
+                //console.log(this.searchResult);
             }
         }
     });

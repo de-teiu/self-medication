@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>セルフメディケーション税制対象品目検索ツール</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="セルフメディケーション対象商品を検索するWebアプリ">
+  <meta name="author" content="DE-TEIU">
+
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/modal.css" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+    <h1>セルフメディケーション税制対象品目検索ツール</h1>
+  </header>
   <div id="main" v-cloak>
     <div class="container search">
       <span class="label-condition">販売名</span>
@@ -31,11 +38,14 @@
   </div>
 
   <footer>
-    <div id="app">
-      <a class="text-about" href="#" @click="showModal = true">About</a>
+    <div id="about-app">
+      <span class="footer-link about" @click="showModal = true">About</span>
       <modal v-if="showModal" @close="showModal = false">
-        <h3 slot="header">About</h3>
       </modal>
+    </div>
+    <div class="author">
+      By
+      <a class="footer-link" href="https://twitter.com/de_teiu_tkg" target="_blank" rel="noopener noreferrer">@de_teiu_tkg</a>
     </div>
   </footer>
 
@@ -45,20 +55,23 @@
         <div class="modal-mask" @click="$emit('close')">
           <div class="modal-wrapper">
             <div class="modal-container">
-    
-              <div class="modal-header">
-                <slot name="header">
-                </slot>
-              </div>
-    
               <div class="modal-body">
                 <slot name="body">
-                  <a href="http://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000124853.html">セルフメディケーション税制(厚生労働省)</a>の
-                  対象製品を検索するツールです。
-                  <br>
+                  <div>
+                    <h3>About</h3>
+                    <a href="http://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000124853.html" target="_blank" rel="noopener noreferrer">セルフメディケーション税制(厚生労働省)</a>の
+                    対象製品を検索するツールです。販売名に入力したキーワードを部分一致で検索します。
+                  </div>
+                  <div>
+                    <h3>使用データ</h3>
+                    セルフメディケーション税制（医療費控除の特例）について
+                    対象品目一覧Excel(<b>2017/12/28</b>時点)
+                    <br>
+                    (jsonデータに加工して使用しています)
+                  </div>
+                  
                 </slot>
               </div>
-    
               <div class="modal-footer">
                 <slot name="footer">
                   <button class="modal-default-button" @click="$emit('close')">

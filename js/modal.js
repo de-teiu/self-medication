@@ -1,11 +1,14 @@
-// register modal component
+/** モーダルウィンドウ表示用 */
+
+"use strict"
+
+/** register modal component */
 Vue.component('modal', {
     template: '#modal-template'
 })
 
-// start app
 new Vue({
-    el: '#app',
+    el: '#about-app',
     data: {
         showModal: false
     }
